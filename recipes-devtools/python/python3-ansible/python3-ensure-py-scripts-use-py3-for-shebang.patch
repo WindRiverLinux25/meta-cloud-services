@@ -1,4 +1,4 @@
-From 9a90119da3fd670aa625cf947abc3ed66d7aaaf3 Mon Sep 17 00:00:00 2001
+From b2321d93864c37157b77b3b7ee0949552a9b4e71 Mon Sep 17 00:00:00 2001
 From: Mark Asselstine <mark.asselstine@windriver.com>
 Date: Thu, 11 May 2023 17:05:54 +0800
 Subject: [PATCH] python3: ensure py scripts use py3 for shebang
@@ -259,7 +259,7 @@ index 5805b97fce..7a246ba8b4 100755
  # Copyright: (c) 2016, Redhat Inc
  # Copyright: (c) 2018, Ansible Project
 diff --git a/lib/ansible/cli/doc.py b/lib/ansible/cli/doc.py
-index 4f7e733154..f5fe9efda3 100755
+index c0eb3c1aa6..7e91d7ac34 100755
 --- a/lib/ansible/cli/doc.py
 +++ b/lib/ansible/cli/doc.py
 @@ -1,4 +1,4 @@
@@ -319,7 +319,7 @@ index 9455b9851a..146602337a 100755
  # GNU General Public License v3.0+ (see COPYING or https://www.gnu.org/licenses/gpl-3.0.txt)
  from __future__ import annotations
 diff --git a/lib/ansible/cli/vault.py b/lib/ansible/cli/vault.py
-index 86902a695f..7f6ee739c5 100755
+index 3800783a57..d4d50b5766 100755
 --- a/lib/ansible/cli/vault.py
 +++ b/lib/ansible/cli/vault.py
 @@ -1,4 +1,4 @@
@@ -339,7 +339,7 @@ index 878ba8eabf..64a614f3f7 100755
  """Build documentation for ansible-core CLI programs."""
  
 diff --git a/packaging/release.py b/packaging/release.py
-index d8b5e19b26..2575f3f98d 100755
+index 8f4099038c..3bf3595324 100755
 --- a/packaging/release.py
 +++ b/packaging/release.py
 @@ -1,4 +1,4 @@
@@ -481,7 +481,7 @@ index 435a7eb979..381b44272d 100644
 +#!/usr/bin/env python3
  
  from __future__ import annotations
-
+ 
 diff --git a/test/integration/targets/cli/test-cli.py b/test/integration/targets/cli/test-cli.py
 index 8d961ff36b..fce6c1d19a 100644
 --- a/test/integration/targets/cli/test-cli.py
@@ -589,7 +589,7 @@ index 1aebfbbb42..fa13209d34 100755
 +#!/usr/bin/env python3
  
  from __future__ import annotations
-
+ 
 diff --git a/test/integration/targets/pip/files/setup.py b/test/integration/targets/pip/files/setup.py
 index 7d7240fe4e..e49aa26558 100755
 --- a/test/integration/targets/pip/files/setup.py
@@ -599,7 +599,7 @@ index 7d7240fe4e..e49aa26558 100755
 +#!/usr/bin/env python3
  
  from __future__ import annotations
-
+ 
 diff --git a/test/integration/targets/service/files/ansible_test_service.py b/test/integration/targets/service/files/ansible_test_service.py
 index 6bf404cad4..691e6f4cb2 100644
 --- a/test/integration/targets/service/files/ansible_test_service.py
@@ -629,7 +629,7 @@ index 6043fdfe0f..54f06923d0 100644
 +#!/usr/bin/env python3
  
  from __future__ import annotations
-
+ 
 diff --git a/test/integration/targets/test_utils/scripts/timeout.py b/test/integration/targets/test_utils/scripts/timeout.py
 index 996071203e..7c8aaa496b 100755
 --- a/test/integration/targets/test_utils/scripts/timeout.py
@@ -649,7 +649,7 @@ index 95bb217f70..c162721e15 100755
 +#!/usr/bin/env python3
  
  from __future__ import annotations
-
+ 
 diff --git a/test/integration/targets/var_precedence/ansible-var-precedence-check.py b/test/integration/targets/var_precedence/ansible-var-precedence-check.py
 index 6511169014..fd285de84b 100755
 --- a/test/integration/targets/var_precedence/ansible-var-precedence-check.py
@@ -719,6 +719,3 @@ index c7edce6b2d..44dd0757a2 100644
  
  
  class TestDetectionRegexes:
--- 
-2.40.0
-
